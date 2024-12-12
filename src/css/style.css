@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #aaaaaa, #eeeeee);
+    margin: 0;
+  }
+  
+  #spin_the_wheel {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  #wheel {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Ensure it doesn’t get too big on large screens */
+  }
+  
+  #spin {
+    font: 1em/0 "Lato", sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 25%;
+    margin: -12.5%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #spin {
+      width: 30%;
+      height: 30%;
+      margin: -15%;
+    }
+  
+    #wheel {
+      max-width: 90%; /* Adjust wheel size for smaller screens */
+    }
+  
+    .modal-dialog {
+      margin: 1rem; /* Ensure the modal fits on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #spin {
+      width: 40%;
+      height: 40%;
+      margin: -20%;
+    }
+  
+    #wheel {
+      max-width: 100%; /* Use the entire width for the wheel */
+    }
+  }
+  
