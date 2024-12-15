@@ -7,13 +7,18 @@
   }
   
   body {
-    height: 100vh;
+    height: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom, #aaaaaa, #eeeeee);
     margin: 0;
   }
+
+  /* canvas {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 0, 0.8));
+} */
+
   
   #spin_the_wheel {
     display: inline-block;
@@ -26,11 +31,12 @@
     display: block;
     width: 100%;
     height: auto;
-    max-width: 600px; /* Ensure it doesn’t get too big on large screens */
+    max-width: 600px; 
+    padding: 15px;
   }
   
   #spin {
-    font: 1em/0 "Lato", sans-serif;
+    font: 1em "Lato", sans-serif;
     user-select: none;
     cursor: pointer;
     display: flex;
@@ -44,7 +50,7 @@
     margin: -12.5%;
     background: #fff;
     color: #fff;
-    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0 8px #000, 0 0px 15px 5px #ffff33;
     border-radius: 50%;
     transition: 0.8s;
   }
@@ -52,10 +58,11 @@
   #spin::after {
     content: "";
     position: absolute;
-    top: -17px;
+    top: -14rem;
     border: 10px solid transparent;
-    border-bottom-color: currentColor;
+    border-bottom-color: red;
     border-top: none;
+    transform: rotate(180deg);
   }
   
   /* Responsive adjustments */
